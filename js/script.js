@@ -23,8 +23,10 @@ function verifyWord(){
     
     console.log(result);
     console.log(reverseResult);
-    if (myText.value === reverseResult) {
+    console.log(myText.value);
+    if (result === reverseResult) {
         write.innerText = `La parola è palindroma`;
+        
 
     }else{
         write.innerText = `La parola non è palindroma`;
