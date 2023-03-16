@@ -5,24 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>Esercizio Pali e Dispari</title>
 </head>
 
 <body>
-    <label for="word" id="word"> Inserisci una parola</label>
-    <input type="text" id="myText">
-    <button class="btn btn-primary">Verifica la parola</button>
-    <h1 class="writeTheSolution"></h1>
+    <div class="container">
+        <h1>Verifica che la tua parola sia palindroma</h1>
+        <label for="word" id="word"> Inserisci una parola</label>
+        <input type="text" id="myText">
+        <button id="verify" class="btn btn-primary">Verifica la parola</button>
+        <h2 class="writeTheSolution"></h2>
+    </div>
+
+    <div class="container py-5">
+        <h2>Fai la tua scelta e gioca con noi</h2>
+        
+        <select name="evenOrOdd" id="choose">
+            <option selected>Scegli..</option>
+            <option value="even">Pari</option>
+            <option value="odd">Dispari</option>
+        </select>
+        <input type="number" id="myNumber" placeholder="max 5" min="1" max="5">
+        <button id="play" class="btn btn-primary">Fai la tua giocata</button>
 
 
-
-
+    </div>
 
 
     <script type="text/javascript" src="./js/script.js"></script>
+
+
 </body>
 
-</html> 
+
+
+</html>

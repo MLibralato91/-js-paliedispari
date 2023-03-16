@@ -7,7 +7,7 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 
 let myText = document.getElementById('myText');
-const btn = document.querySelector('button');
+const btn = document.getElementById('verify');
 let write = document.querySelector('.writeTheSolution');
 
 btn.addEventListener('click', verifyWord);
@@ -23,7 +23,7 @@ function verifyWord(){
     for (let i = result.length - 1; i >= 0; i--) { 
         newWord += result[i];
     }
-    console.log(result);
+    
     console.log(newWord);
     console.log(firstWord);
     
@@ -36,3 +36,26 @@ function verifyWord(){
     //console.log(result);
     
 }
+
+/* Esercizio Pari e Dispari
+--------------------------------
+L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+Sommiamo i due numeri
+Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+Dichiariamo chi ha vinto.
+*/
+
+const choose = document.getElementById('choose');
+
+//choose.addEventListener('change', function());
+
+myChoice = document.getElementById('myNumber');
+
+pcChoice = Math.floor(Math.random() * 5) + 1;
+
+playBtn = document.getElementById('play');
+
+
+
+
