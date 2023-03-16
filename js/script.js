@@ -14,27 +14,27 @@ btn.addEventListener('click', verifyWord);
 
 
 
-function verifyWord(){
+function verifyWord() {
     let firstWord = myText.value;
     let result;
     let newWord = '';
     result = myText.value.split("")
 
-    for (let i = result.length - 1; i >= 0; i--) { 
+    for (let i = result.length - 1; i >= 0; i--) {
         newWord += result[i];
     }
-    
+
     console.log(newWord);
     console.log(firstWord);
-    
+
     if (firstWord === newWord) {
         write.innerText = `La parola è palindroma`;
 
-    }else{
+    } else {
         write.innerText = `La parola non è palindroma`;
     }
     //console.log(result);
-    
+
 }
 
 /* Esercizio Pari e Dispari
@@ -47,15 +47,43 @@ Dichiariamo chi ha vinto.
 */
 
 const choose = document.getElementById('choose');
+let myChoose;
 
-//choose.addEventListener('change', function());
+document.getElementById('choose').addEventListener('change', function () {
+    myChoose = this.value;
+    console.log(myChoose);
+});
+
+console.log(myChoose);
+
+let myNumber = document.querySelector('.myNumber');
+let pcNumber = document.querySelector('.pcNumber');
+let winLost = document.querySelector('.winLost');
 
 myChoice = document.getElementById('myNumber');
+
+console.log(pcNumber);
 
 pcChoice = Math.floor(Math.random() * 5) + 1;
 
 playBtn = document.getElementById('play');
+console.log(pcChoice);
+let addict;
 
 
+playBtn.addEventListener('click', calc);
+
+function calc() {
+    addict = pcChoice + parseInt(myChoice.value);
+
+    myNumber.innerText = `Il tuo numero è ${myChoice.value}`;
+    pcNumber.innerText = `Il numero del computer è ${pcChoice}`;
 
 
+    if (addict % 2 === 0 && myChoose === 'even') {
+        winLost.innerText = `Hai vinto`;
+
+    }
+    winLost.innerText = `Hai perso`;
+
+}
