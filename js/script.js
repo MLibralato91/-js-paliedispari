@@ -12,21 +12,23 @@ let write = document.querySelector('.writeTheSolution');
 
 btn.addEventListener('click', verifyWord);
 
-let result;
-let reverseResult;
-function verifyWord(){
-    result = myText.value.split("");
-    
-    
 
-    reverseResult = result.reverse();
-    
+
+function verifyWord(){
+    let firstWord = myText.value;
+    let result;
+    let newWord = '';
+    result = myText.value.split("")
+
+    for (let i = result.length - 1; i >= 0; i--) { 
+        newWord += result[i];
+    }
     console.log(result);
-    console.log(reverseResult);
-    console.log(myText.value);
-    if (result === reverseResult) {
+    console.log(newWord);
+    console.log(firstWord);
+    
+    if (firstWord === newWord) {
         write.innerText = `La parola è palindroma`;
-        
 
     }else{
         write.innerText = `La parola non è palindroma`;
